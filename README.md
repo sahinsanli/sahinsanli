@@ -42,10 +42,10 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sahinsanli&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="Top languages" height="165" />
 </p>
 
-### :trophy: Rozetler
+### :chart_with_upwards_trend: Aktivite Grafiği
 
 <p>
-  <img src="https://github-profile-trophy.vercel.app/?username=sahinsanli&theme=tokyonight&no-frame=true&no-bg=true&column=7" alt="Trophy" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sahinsanli&theme=github-gh-dark&hide_border=true&bg_color=0D1117" alt="Activity graph" />
 </p>
 
 <div align="center">
