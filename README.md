@@ -42,11 +42,6 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sahinsanli&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="Top languages" height="165" />
 </p>
 
-### :chart_with_upwards_trend: Aktivite Grafiği
-
-<p>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sahinsanli&theme=github-gh-dark&hide_border=true&bg_color=0D1117" alt="Activity graph" />
-</p>
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=sahinsanli&style=for-the-badge&color=58A6FF" alt="Profile views" />
