@@ -1,0 +1,33 @@
+name: Daily Commit
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # her gün 12:00 TR saati (UTC 09:00)
+  workflow_dispatch: # manuel tetikleme
+
+permissions:
+  contents: write
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Append daily entry to commits.md
+        run: |
+          echo "- \`$(TZ=Europe/Istanbul date '+%Y-%m-%d %H:%M')\` günlük otomatik güncelleme" >> commits.md
+          git config user.name "sahinsanli"
+          git config user.email "sahinsanli123@gmail.com"
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet; then
+            echo "Değişiklik yok, commit atlanıyor"
+            exit 0
+          fi
+          git add commits.md
+          git commit -m "daily update: $(TZ=Europe/Istanbul date '+%Y-%m-%d')"
+          git push
