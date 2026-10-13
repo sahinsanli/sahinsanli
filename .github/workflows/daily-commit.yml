@@ -16,18 +16,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Append daily entry to commits.md
+      - name: Configure git identity
         run: |
-          echo "- \`$(TZ=Europe/Istanbul date '+%Y-%m-%d %H:%M')\` günlük otomatik güncelleme" >> commits.md
           git config user.name "sahinsanli"
           git config user.email "sahinsanli123@gmail.com"
 
-      - name: Commit and push if changed
+      - name: Create 3 daily commits
         run: |
-          git add commits.md
-          if git diff --cached --quiet; then
-            echo "Değişiklik yok, commit atlanıyor"
-            exit 0
-          fi
-          git commit -m "daily update: $(TZ=Europe/Istanbul date '+%Y-%m-%d')"
+          TODAY=$(TZ=Europe/Istanbul date '+%Y-%m-%d')
+          for i in 1 2 3; do
+            echo "- \`$TODAY\` günlük otomatik güncelleme #$i" >> commits.md
+            git add commits.md
+            git commit -m "daily update $TODAY #$i"
+          done
           git push
