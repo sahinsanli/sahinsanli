@@ -24,10 +24,10 @@ jobs:
 
       - name: Commit and push if changed
         run: |
-          if git diff --quiet; then
+          git add commits.md
+          if git diff --cached --quiet; then
             echo "Değişiklik yok, commit atlanıyor"
             exit 0
           fi
-          git add commits.md
           git commit -m "daily update: $(TZ=Europe/Istanbul date '+%Y-%m-%d')"
           git push
