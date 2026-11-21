@@ -71,3 +71,6 @@
 - `2026-11-04` günlük otomatik güncelleme #1
 - `2026-11-04` günlük otomatik güncelleme #2
 - `2026-11-04` günlük otomatik güncelleme #3
+- `2026-11-21` günlük otomatik güncelleme #1
+- `2026-11-21` günlük otomatik güncelleme #2
+- `2026-11-21` günlük otomatik güncelleme #3
